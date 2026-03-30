@@ -1,0 +1,162 @@
+ 
+/* For base styles */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+
+:root {
+  --compBl: #b1c1d9;
+  --primary: #9BEAEE;
+  --sec: #43838C;
+  --darkSub: #6F7B82;
+}
+
+  .text-darkSub {
+  color: var(--darkSub)
+  }
+  
+  .bg-darkSub {
+  background-color: var(--darkSub)
+  }
+
+  .text-Bl {
+  color: var(--compBl);
+  }
+  
+  .text-pr {
+  color: var(--primary)
+  }
+  
+  .bg-pr {
+   background-color: var(--primary)
+  }
+  
+  .bg-Bl {
+  background-color: var(--compBl)
+  }
+  
+  .text-sec {
+  color: var(--sec);
+  }
+  
+  .bg-sec {
+  background-color: var(--sec);
+  }
+  
+  .my-text-gradient {
+  background: linear-gradient(to right, var(--sec), var(--primary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  }
+  
+  .my-bg-gradient {
+   background: linear-gradient(to right, var(--sec), var(--primary));
+  }
+  
+  .my-border-gradient {
+  border-radius: 8px;
+  background: linear-gradient(to right, var(--sec), var(--primary));
+  padding: 2px;
+}
+
+.my-border-gradient > * {
+  background: #F2F6FF; /* inner bg */
+  border-radius: 6px;
+}
+
+
+* ,
+*::before,
+*::after {
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+}
+
+
+img {
+display: block;
+width: 100%;
+height: auto;
+}
+
+html {
+scroll-behavior: smooth;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+cursor: pointer
+}
+
+ul,
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+figure,
+picture,
+label {
+  margin: 0;
+}
+
+body {
+    background: rgba(211, 194, 179, .1);
+  font: 400 .9rem/1.5;
+  font-family: sans-serif;
+}
+
+
+  
+  .shine-mask {
+  position: relative;
+  display: inline-block;
+}
+
+.shine-mask::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(90deg, transparent, white, transparent);
+  mask: linear-gradient(#fff, #fff);
+  -webkit-mask: linear-gradient(#fff, #fff);
+  animation: shineMask 7s infinite;
+  pointer-events: none;
+}
+
+@keyframes shineMask {
+  0% {
+    transform: translateX(-100%);
+  }
+  20%, 100% {
+    transform: translateX(100%);
+  }
+}
+  
+  
+  
+  
+  
