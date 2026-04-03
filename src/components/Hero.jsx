@@ -12,10 +12,10 @@ const Hero = () => {
               </span>
             </h1>
             <p className="text-xl md:text-2xl mb-6 text-sec">
-              A Passionate Web Developer
+              Full-Stack MERN Developer Building Scalable Web Applications
             </p>
             <p className="text-darkSub mb-8 max-w-lg mx-auto md:mx-0">
-              I build beautiful, responsive, and user-friendly web applications with modern technologies.
+I create fast, secure, and user-friendly eCommerce and business applications that help companies grow and operate efficiently.
             </p>
             <div className="flex gap-5 justify-center md:justify-start">
               <a

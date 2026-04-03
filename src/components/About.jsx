@@ -20,12 +20,10 @@ const About = () => {
               I'm a Developer passionate about creating amazing digital experiences
             </h3>
             <p className="text-darkSub mb-4 leading-relaxed">
-              I started my coding journey 3 years ago and have been hooked ever since. 
-              I love solving complex problems and turning ideas into reality through code.
+              I’m a self-taught full-stack developer specializing in the MERN stack. I focus on building real-world applications that solve business problems and deliver smooth user experiences.
             </p>
             <p className="text-darkSub mb-6 leading-relaxed">
-              When I'm not coding, you can find me exploring new technologies, contributing to open source, 
-              or enjoying a good cup of coffee while reading tech blogs.
+              I enjoy working on scalable systems, improving performance, and turning ideas into production-ready products.
             </p>
             
             <div className="grid grid-cols-2 gap-4">
