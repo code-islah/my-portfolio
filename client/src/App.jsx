@@ -2,8 +2,8 @@ import { useMemo, useState } from "react";
 import axios from "axios";
 
 const rankStats = [
-  { label: "Email", value: "alaminkhan284@gmail.com" },
-  { label: "Location", value: "Chuadanga, Bangladesh" },
+  { label: "Email", value: "alamin.coder284@gmail.com" },
+  { label: "Location", value: "Bangladesh" },
   { label: "Birthday", value: "January 5, 1997" },
   { label: "Freelance", value: "Available" }
 ];
@@ -32,9 +32,9 @@ const projects = [
       "A full-stack e-commerce platform with cart, payments, and admin dashboard.",
     tech: "React, Node.js, MongoDB, Stripe",
     difficulty: "Featured",
-    image: "/project-images/logo.png",
-    liveUrl: "https://codeislah.netlify.app/",
-    sourceUrl: "https://github.com/code-islah/Code-Islah-Official-Website"
+    image: "/project-images/tazkiya-store.png",
+    liveUrl: "https://tazkiya-store.vercel.app/",
+    sourceUrl: "https://github.com/code-islah/tazkiya-store"
   },
   {
     title: "Inventory Management",
