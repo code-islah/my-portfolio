@@ -30,7 +30,7 @@ const projects = [
     title: "E-Commerce Platform",
     description:
       "A full-stack e-commerce platform with cart, payments, and admin dashboard.",
-    tech: "React, Node.js, MongoDB, Stripe",
+    tech: "React, Node.js, MongoDB, Express",
     difficulty: "Featured",
     image: "/project-images/tazkiya-store.png",
     liveUrl: "https://tazkiya-store.vercel.app/",
@@ -353,7 +353,7 @@ function App() {
             LinkedIn
           </a>
           <a href="#" aria-label="Fiver">
-            Fiver
+            Fiverr
           </a>
         </div>
       </footer>
