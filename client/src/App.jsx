@@ -346,13 +346,13 @@ function App() {
       <footer className="site-footer">
         <p>© {new Date().getFullYear()} Md Alamin. All rights reserved.</p>
         <div className="footer-links">
-          <a href="#" aria-label="GitHub">
+          <a href="https://github.com/alamin-coder284" aria-label="GitHub">
             GitHub
           </a>
-          <a href="#" aria-label="LinkedIn">
+          <a href="https://www.linkedin.com/in/alamin284/" aria-label="LinkedIn">
             LinkedIn
           </a>
-          <a href="#" aria-label="Fiver">
+          <a href="https://www.linkedin.com/in/alamin284/" aria-label="Fiverr">
             Fiverr
           </a>
         </div>
