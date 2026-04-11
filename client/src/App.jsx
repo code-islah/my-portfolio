@@ -352,7 +352,7 @@ function App() {
           <a href="https://www.linkedin.com/in/alamin284/" aria-label="LinkedIn">
             LinkedIn
           </a>
-          <a href="https://www.linkedin.com/in/alamin284/" aria-label="Fiverr">
+          <a href="https://www.fiverr.com/s/1qyLby6" aria-label="Fiverr">
             Fiverr
           </a>
         </div>
