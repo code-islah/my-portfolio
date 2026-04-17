@@ -112,7 +112,7 @@ function App() {
   const [feedback, setFeedback] = useState({ type: "", message: "" });
 
   const apiBaseUrl = useMemo(
-    () => import.meta.env.VITE_API_BASE_URL,
+    () => import.meta.env.VITE_API_BASE_URL || "https://my-portfolio-nmz0.onrender.com",
     []
   );
 
