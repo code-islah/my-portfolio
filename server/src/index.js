@@ -5,7 +5,9 @@ import connectDatabase from "./config/db.js";
 import contactRoutes from "./routes/contactRoutes.js";
 
 dotenv.config();
-connectDatabase();
+connectDatabase()
+  .then(() => console.log("DB connected"))
+  .catch((err) => console.error("DB connection error:", err));
 
 const app = express();
 const port = process.env.PORT || 5000;
@@ -19,9 +21,13 @@ app.get("/api/health", (req, res) => {
   res.status(200).json({ ok: true, message: "Server is healthy." });
 });
 
+app.get("/", (req, res) => {
+  res.send("Server is running 🚀");
+});
+
 app.use("/api/contact", contactRoutes);
 
-app.listen(port, () => {
+app.listen(port, "0.0.0.0", () => {
   console.log(`Server listening on port ${port}`);
 });
 
