@@ -57,14 +57,14 @@ const projects = [
     sourceUrl: "https://github.com/code-islah/Code-Islah-Official-Website"
   },
   {
-    title: "Learning Platform - Code Islah",
+    title: "Resume Analyzer - with AI",
     description:
-      "A modern web-based learning platform designed to provide structured educational content, helping users learn and explore various topics in an organized and interactive way.",
-    tech: "HTML, CSS, JavaScript",
+      "AI Resume Analyzer helps job seekers quickly evaluate how well their resume matches a target role. Instead of manually reviewing formatting, wording, and keyword relevance, users can upload their resume and get an immediate AI-generated breakdown.",
+    tech: "Next.js, React.js, Gemini AI, TailwindCSS & W3Schools",
     difficulty: "Featured",
-    image: "/project-images/codeIslah.png",
-    liveUrl: "https://codeislah.netlify.app/",
-    sourceUrl: "https://github.com/code-islah/Code-Islah-Official-Website"
+    image: "/project-images/ai-res-anaz.png",
+    liveUrl: "https://resume-analyzer284.vercel.app/",
+    sourceUrl: "https://github.com/alamin-coder284/ai-resume-analyzer.git"
   },
   {
     title: "Social Media - Bayan-Connector",
