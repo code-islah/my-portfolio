@@ -20,7 +20,7 @@ const projects = [
     title: "Al Quran",
     description:
       "A Quran app with 114 chapters, 6236 verses, audio, bookmarks, and last-read tracking.",
-    tech: "React, Node.js, MongoDB, Stripe",
+    tech: "Vanilla HTML, CSS, JS",
     difficulty: "Featured",
     image: "/project-images/alQuran.png",
     liveUrl: "https://quranmajid.netlify.app/",
@@ -40,7 +40,7 @@ const projects = [
     title: "Inventory Management",
     description:
       "Agam-Hisab is a lightweight web app designed to help small business owners manage daily accounts on the go. It works fully offline using the browser's built-in IndexedDB, so your data stays on your device and under your control.",
-    tech: "Vue.js, Express, Socket.io, Tailwind",
+    tech: "Vanilla CSS, JS, IndexedDB",
     difficulty: "Featured",
     image: "/project-images/agamHisab.png",
     liveUrl: "https://agamhisab.netlify.app/",
