@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import axios from "axios";
 
 const rankStats = [
@@ -116,6 +116,34 @@ function App() {
     []
   );
 
+  useEffect(() => {
+    const animatedNodes = document.querySelectorAll(".reveal");
+
+    if (!("IntersectionObserver" in window)) {
+      animatedNodes.forEach((node) => node.classList.add("in-view"));
+      return undefined;
+    }
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("in-view");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      {
+        threshold: 0.18,
+        rootMargin: "0px 0px -8% 0px"
+      }
+    );
+
+    animatedNodes.forEach((node) => observer.observe(node));
+
+    return () => observer.disconnect();
+  }, []);
+
   const handleChange = (event) => {
     const { name, value } = event.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
@@ -163,7 +191,7 @@ function App() {
       </header>
 
       <main className="dojo-layout">
-        <section id="home" className="hero section panel dojo-hero">
+        <section id="home" className="hero section panel dojo-hero reveal">
           <div>
             <p className="eyebrow">PROFILE OVERVIEW</p>
             <h1>Hi, I'm Md Alamin</h1>
@@ -209,8 +237,8 @@ function App() {
           </div>
 
           <div className="stat-grid">
-            {rankStats.map((stat) => (
-              <article key={stat.label}>
+            {rankStats.map((stat, index) => (
+              <article key={stat.label} style={{ "--reveal-index": index }}>
                 <p>{stat.label}</p>
                 <h3>{stat.value}</h3>
               </article>
@@ -219,8 +247,8 @@ function App() {
 
           <div className="rank-panel">
             <p className="eyebrow">My Skills</p>
-            {stackRanks.map((item) => (
-              <div key={item.stack} className="rank-row">
+            {stackRanks.map((item, index) => (
+              <div key={item.stack} className="rank-row" style={{ "--reveal-index": index }}>
                 <div className="rank-meta">
                   <span>{item.stack}</span>
                   <span>{item.rank}</span>
@@ -235,13 +263,17 @@ function App() {
 
         <div className="content-stream">
           <section id="projects" className="section">
-            <div className="section-heading">
+            <div className="section-heading reveal">
               <p className="eyebrow">MY PROJECTS</p>
               <h2>Selected Work</h2>
             </div>
             <div className="project-grid">
               {projects.map((project, index) => (
-                <article key={`${project.title}-${index}`} className="project-card reveal">
+                <article
+                  key={`${project.title}-${index}`}
+                  className="project-card reveal"
+                  style={{ "--reveal-index": index }}
+                >
                   <img
                     className="project-image"
                     src={project.image}
@@ -278,13 +310,17 @@ function App() {
           </section>
 
           <section id="experience" className="section">
-            <div className="section-heading">
+            <div className="section-heading reveal">
               <p className="eyebrow">ABOUT ME</p>
               <h2>Who I Am</h2>
             </div>
             <div className="timeline">
-              {experiences.map((experience) => (
-                <article className="timeline-item reveal" key={experience.role}>
+              {experiences.map((experience, index) => (
+                <article
+                  className="timeline-item reveal"
+                  key={experience.role}
+                  style={{ "--reveal-index": index }}
+                >
                   <h3>{experience.role}</h3>
                   <p className="meta">
                     {experience.company} | {experience.period}
@@ -296,7 +332,7 @@ function App() {
           </section>
 
           <section id="contact" className="section contact">
-            <div className="section-heading">
+            <div className="section-heading reveal">
               <p className="eyebrow">GET IN TOUCH</p>
               <h2>Send Message</h2>
             </div>
@@ -343,7 +379,7 @@ function App() {
         </div>
       </main>
 
-      <footer className="site-footer">
+      <footer className="site-footer reveal">
         <p>© {new Date().getFullYear()} Md Alamin. All rights reserved.</p>
         <div className="footer-links">
           <a href="https://github.com/alamin-coder284" aria-label="GitHub">
