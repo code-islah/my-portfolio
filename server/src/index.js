@@ -3,6 +3,7 @@ import cors from "cors";
 import dotenv from "dotenv";
 import connectDatabase from "./config/db.js";
 import contactRoutes from "./routes/contactRoutes.js";
+import analyticsRoutes from "./routes/analyticsRoutes.js";
 
 dotenv.config();
 connectDatabase()
@@ -26,8 +27,8 @@ app.get("/", (req, res) => {
 });
 
 app.use("/api/contact", contactRoutes);
+app.use("/api/analytics", analyticsRoutes);
 
 app.listen(port, "0.0.0.0", () => {
   console.log(`Server listening on port ${port}`);
 });
-
