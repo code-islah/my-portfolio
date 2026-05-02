@@ -223,6 +223,7 @@ function App() {
   });
   const [isSending, setIsSending] = useState(false);
   const [feedback, setFeedback] = useState({ type: "", message: "" });
+  const [isValid, setIsValid] = useState(false);
 
   const apiBaseUrl = useMemo(
     () => import.meta.env.VITE_API_BASE_URL || "https://my-portfolio-nmz0.onrender.com",
@@ -533,7 +534,7 @@ function App() {
             </div>
           </section>
 
-          <section id="proof" className="section proof-section">
+          {isValid && <section id="proof" className="section proof-section">
             <div className="section-heading reveal">
               <p className="eyebrow">PROOF SIGNALS</p>
               <h2>Trust and Delivery Evidence</h2>
@@ -581,7 +582,7 @@ function App() {
                 </div>
               </article>
             </div>
-          </section>
+          </section>}
 
           <section id="experience" className="section">
             <div className="section-heading reveal">
